@@ -1,0 +1,20 @@
+body{font-size: 15px;}
+.item3:hover {
+    color:white;
+    background-color: black;
+}
+.item4{color:green;}
+.item5{color:yellow;}
+h1{
+    font-family: 'Nanum Pen Script', cursive;
+}
+
+.fonttest1{color:greenyellow; font-size: 2em;}
+.fonttest2{direction: rtl;}
+.fonttest3{letter-spacing: -0.1ch;}
+.fonttest5{line-height: 0.4cm;}
+.fonttest6{text-align: center;}
+.fonttest7{text-decoration: underline; text-decoration-color: red;}
+.fonttest8{text-indent: 2ch;}
+.fonttest9{text-shadow: 3px 3px 2px gray;}
+.fonttest10{text-transform: uppercase;}
