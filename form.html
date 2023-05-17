@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input[type=text] {
+            border: 3px solid blue;
+            font-weight: bold;
+            margin-bottom: 20px;
+            
+            width: 400px;
+            height: 400px;
+            background-size: 100% 100%;
+        }
+        input[type=email] {
+            border: 3px solid blue;
+            background-color: black;
+            color: pink;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        input[type=submit] {
+            background-color: green;
+            border: none;
+            color: white;
+            padding: 16px 32px;
+        }
+        input:hover {
+            background-image: url('image.jpg');
+        }
+        textarea:hover {
+            background-color: lightgrey;
+        }
+    </style>
+</head>
+<body>
+    <h2>상품 평</h2>
+    <p>받으신 상품을 평가해주세요.</p>
+    <div>
+        <form action="process.jsp">
+            <label for="name">이름</label>
+            <input type="text" id="name" name="name" placeholder="이름"><br>
+            <label for="email">이메일</label>
+            <input type="email" id="email" name="email" placeholder="이메일"><br>
+            <label for="subject">상품 평</label>
+            <textarea id="subject" name="subject" placeholder="상품을 평가해주세요." style="height:100px"></textarea>
+            </form>
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+</body>
+
+</html>
