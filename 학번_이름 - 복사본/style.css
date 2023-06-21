@@ -4,6 +4,7 @@
 }
 
 .container{
+    position: relative;
     width: 100%;
     height: 100vh;
     /* background-image:  */
@@ -23,6 +24,13 @@
     text-decoration: none;
     color: white;
     font-family: abster;
+    padding: 10px;
+    border-bottom: white solid;
+}
+
+.container .nav ul {
+    padding: 10px;
+    border-bottom: white solid;
 }
 
 .container .nav ul li {
@@ -60,7 +68,7 @@
 }
 
 .container .hero button {
-    border: 2px solid darkgreen;
+    border: 2px solid darkturquoise;
     background: none;
     padding: 15px 20px;
     margin-top: 30px;
@@ -76,19 +84,21 @@
 }
 
 .container .foot {
-    width: 80%;
-    height: 80px;
+    width: 100%;
+    height: 90px;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
-    background: linear-gradient(lightgrey, lightgrey)
+    background-color: lightgrey;
+    opacity: 0.4;
     position: absolute;
-    left: 10%;
-    top: 90%;
-    border-radius: 5px;
+    bottom: 0px;
 }
 
 .container .foot h1 {
-    margin-left: 20px;
+    position: absolute;
+    top: 50%;
+    margin-top: -20px;
+    margin-left: 30px;
     font-family: abster;
 }
