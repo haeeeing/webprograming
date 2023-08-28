@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function calc(){
+        let x = document.getElementById('x').value;
+        let y = document.getElementById('y').value;
+        let sum = parseInt(x)+parseInt(y);
+        document.getElementById('sum').value=sum;
+        }
+    </script>
+</head>
+<body>
+    <h3>덧셈 계산기</h3>
+
+    첫번째 정수: <input id = "x" type="text"><br>
+    두번째 정수: <input id = "y" type="text"><br>
+    합계: <input id = "sum" type="text" readonly>
+    <button onclick="calc()">계산</button>
+
+</body>
+</html>
