@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function calc(type) {
+            let x = parseFloat(document.calculator.number1.value);
+            let y = parseFloat(document.calculator.number2.value);
+
+            if (type == 1)
+                y = Math.sin((x * Math.PI) / 100.0);
+            else if (type == 2)
+                y = Math.log(x);
+            else if (type == 3)
+                y = Math.sqrt(x);
+            else if (type == 4)
+                y = Math.abs(x);
+            else if (type == 5)
+                y = Math.round(x);
+            else if (type == 6)
+                y = Math.floor(x);
+            else if (type == 7)
+                y = Math.ceil(x);
+            else if (type == 8)
+                y = Math.pow(x,y);
+            document.calculator.total.value = y;
+        }
+
+        function calc2(type) {
+            let x = parseFloat(document.calculator.number2.value);
+
+            if (type == 1)
+                y = Math.sin((x * Math.PI) / 100.0);
+            else if (type == 2)
+                y = Math.log(x);
+            else if (type == 3)
+                y = Math.sqrt(x);
+            else if (type == 4)
+                y = Math.abs(x);
+            else if (type == 5)
+                y = Math.round(x);
+            else if (type == 6)
+                y = Math.floor(x);
+            else if (type == 7)
+                y = Math.ceil(x);
+            else if (type == 8)
+                y = Math.pow(x,y);
+            document.calculator.total.value = y;
+        }
+
+        function calc3(type) {
+            let x = parseFloat(document.calculator.number1.value);
+            let y = parseFloat(document.calculator.number2.value);
+
+            if (type == 1)
+                y = Math.pow(x,y);
+            else if (type == 2)
+                y = Math.hypot(x,y);
+            document.calculator.total.value = y;
+        }
+    </script>
+</head>
+<body>
+    <form name="calculator">
+        입력:               <input type="text" name="number1"><br />
+        입력:               <input type="text" name="number2"><br />
+        계산 결과:          <input type="text" name="total"><br />
+
+        number1 : 
+        <input type="button" value="SIN" onclick="calc(1);">
+        <input type="button" value="LOG" onclick="calc(2);">
+        <input type="button" value="SQRT" onclick="calc(3);">
+        <input type="button" value="ABS" onclick="calc(4);">
+        <input type="button" value="ROUND" onclick="calc(5);">
+        <input type="button" value="FLOOR" onclick="calc(6);">
+        <input type="button" value="CEIL" onclick="calc(7);">
+
+        <br>number2 : 
+        <input type="button" value="SIN" onclick="calc2(1);">
+        <input type="button" value="LOG" onclick="calc2(2);">
+        <input type="button" value="SQRT" onclick="calc2(3);">
+        <input type="button" value="ABS" onclick="calc2(4);">
+        <input type="button" value="ROUND" onclick="calc2(5);">
+        <input type="button" value="FLOOR" onclick="calc2(6);">
+        <input type="button" value="CEIL" onclick="calc2(7);">
+
+        <br> umber1 & number2 : 
+        <input type="button" value="POW" onclick="calc3(1);">
+        <input type="button" value="HYPOT" onclick="calc3(2);">
+    </form>
+</body>
+</html>

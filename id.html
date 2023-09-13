@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        * {
+            text-align: center;
+        }
+        p {
+            margin-top: 1ch;
+            margin-bottom: 1ch;
+        }
+        button {
+            margin-top: 3ch;
+        }
+    </style>
+    <script>
+        function check() {
+            let s1 = document.getElementById("id").value;
+            if (s1.length < 6) 
+                alert("아이디는 6글자 이상이어야 합니다.");
+
+            let s2 = document.getElementById("pw").value;
+            if (s2.length > 12) 
+                alert("비밀번호는 12글자 미만이어야 합니다.");
+            if (s2.length < 8) 
+                alert("비밀번호는 8글자 이상이어야 합니다.");
+        }
+        /*function checkPW() {
+            let s = document.getElementById("pw").value;
+            if (s.length > 12) 
+                alert("비밀번호는 12글자 미만이어야 합니다.");
+            if (s.length < 8) 
+                alert("비밀번호는 8글자 이상이어야 합니다.");
+        }
+        */
+    </script>
+</head>
+<body>
+        <p>ID</p> <input type="text" id="id" size=10> <br>
+        <p>PASSWORD</p>  <input type="text" id="pw" size=10> <br>
+        <button onclick="check()">CHECK</button>
+</body>
+</html>

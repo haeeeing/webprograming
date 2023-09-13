@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<body>
+    <!-- // 문자열 검색
+    <script>
+         let s = "A bad workman always blames his tools.";
+         let n = s.indexOf("bad")
+         document.write(n + '<br>'); // 6
+     </script> -->
+
+    <!-- // 문자열 매칭
+    <script>
+
+        let str = 'Like father, like son.';
+        // like를 찾는다. i와 g는 옵션으로 insensitive, globally를 의미한다.
+        result = str.match(/like/ig);
+        document.write(result + '<br>');
+    </script> -->
+
+    <!-- //문자열 대체
+    <script>
+            let p = 'The quick brown fox jumps over the lazy dog.';
+    document.write(p+"<br>");
+            document.write(p.replace('dog','cat')+"<br>");
+            let regex = /Dog/i;
+            document.write(p.replace(regex, 'cat'))+"<br>";
+    </script> -->
+
+    <!-- //문자열 분할 <br>
+    <script>
+            let s = "One,Two,Three,Four,Five";
+            array = s.split(',');
+            for (i = 0; i < array.length; i++) {
+                document.write(i + '-' + array[i] + '<br>');
+            }
+    </script>  -->
+
+</body>
+</html>
