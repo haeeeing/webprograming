@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>주사위 굴리기</title>
+    <style>
+        * {
+            font-family: 굴림, sans-serif;
+            text-align: center;
+        }
+
+        #dice1, #dice2 {
+            height: 100px;
+            width: 100px;
+            margin: 10px auto;
+            background-color: yellow;
+            border: 1px solid gray;
+            border-radius: 10px;
+            font-size: 100px;
+        }
+    </style>
+        <script>
+            function roll() {
+                let result1 = Math.floor(Math.random() * 6) + 1;
+                let dice1 = document.getElementById("dice1");
+                dice1.innerHTML= result1;
+
+                let result2 = Math.floor(Math.random() * 6) + 1;
+                let dice2 = document.getElementById("dice2");
+                dice2.innerHTML= result2;
+
+                // let sum = result1 + result2;
+                // document.getElementById("sum").value = sum;
+                document.getElementById("result").innerHTML = result1+"+"+result2+"=?";
+            };
+
+            function sum() {
+                let sumValue = document.getElementById("sum").innerHTML
+                let sum = parseInt(dice1.innerHTML) + parseInt(dice2.innerHTML);
+                if(sumValue != ""){
+                    if (sumValue == sum) alert("정답입니다.");
+                }
+                
+            };
+        </script>
+</head>
+<body>
+    <h3>주사위 굴리기 게임입니다.</h3>
+    <p id="dice1"> </p>
+    <p id="dice2"> </p>
+    <button onclick="roll()">주사위 굴리기</button>
+    <p id="result"> </p>
+    <input id="sum">
+    <button onclick="sum()">정답 입력</button>
+</body>
+</html>
