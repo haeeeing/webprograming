@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            background-color: lightgrey;
+            width: 250px;
+            height: 250px;
+            margin:0 auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            align-content: center;
+            text-align: center;
+            flex-wrap: wrap;
+
+            left: 50%;
+            top: 50%;
+            position:absolute;
+            transform: translate(-50%, -50%);
+        }
+    </style>
+    <script>
+        function cal() {
+        let answer = document.getElementById("answer").value;
+        let s = document.getElementById("problem").value;
+        let solution = eval(s);
+        if(answer != ""){
+            if (answer == solution) {
+            alert("정답!");
+            }
+            else{
+                alert("틀렸습니다! 정답은"+solution);
+            }
+        }
+        }
+    </script>
+</head>
+<body>
+    <div>
+        <h1>Math Quiz</h1>
+        <input type="text" id="problem" value="12*2+20-30"><br>
+        <input type="text" id="answer"> <br>
+        <button onclick="cal()">정답 알아보기</button>
+    </div>
+</body>
+</html>
